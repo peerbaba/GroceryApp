@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@import "tailwindcss";
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+@theme {
+  --color-primary: #4b0082;
+}
+body {
+      margin: 0;
+      background: #0f172a;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    #sidebar {
+      width: 260px;
+      background: #020617;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    #sidebar.collapsed {
+      width: 80px;
+    }
+
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+    }
+
+    .menu li {
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+
+    .menu li:hover,
+    .menu .active {
+      background: #1e293b;
+    }
+
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .logout {
+      margin-top: 40px;
+      cursor: pointer;
+    }
+
+    /* Main */
+    #main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topbar input {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    /* Buttons */
+    .glow-btn {
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      margin-right: 10px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .blue { background: #2563eb; }
+    .green { background: #16a34a; }
+    .orange { background: #ea580c; }
+    .red { background: #dc2626; }
+
+    /* Cards */
+    .stat-card {
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .stat-card.blue { background: #1d4ed8; }
+    .stat-card.green { background: #15803d; }
+    .stat-card.orange { background: #c2410c; }
+    .stat-card.purple { background: #6d28d9; }
+
+    .glass-card {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+  
