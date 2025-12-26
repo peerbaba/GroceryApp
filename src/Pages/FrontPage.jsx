@@ -6,9 +6,10 @@ import NewsLetter from "../component/NewsLetter";
 import Navbar from '../component/Navbar';
 
 function FrontPage() {
+  const tag = "Freshness You Can Trust, Savings You will Love!"
   return (
     <div  className="bg-white mt-10" >
-      <Banner />
+      <Banner tre={tag} />
       <Category />
       <BestSeller />
       <NewsLetter />
