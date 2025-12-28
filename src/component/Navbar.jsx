@@ -5,6 +5,7 @@ import { assets } from "../assets/assets";
 import toast from "react-hot-toast";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  
   const {
     user,
     setUser,
@@ -14,6 +15,7 @@ const Navbar = () => {
     searchQuery,
     setSearchQuery,
     cartCount,
+    countCartItems,
     axios,
   } = useAppContext();
 
@@ -98,7 +100,7 @@ const Navbar = () => {
             />
           </svg>
           <button className="absolute -top-2 -right-3 text-xs text-white bg-indigo-500 w-[18px] h-[18px] rounded-full">
-            {cartCount()}
+            {countCartItems()}
           </button>
         </div>
 
@@ -149,7 +151,7 @@ const Navbar = () => {
             />
           </svg>
           <button className="absolute -top-2 -right-3 text-xs text-white bg-indigo-500 w-[18px] h-[18px] rounded-full">
-            {cartCount()}
+            {countCartItems()}
           </button>
         </div>
         <button

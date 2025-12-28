@@ -16,7 +16,7 @@ const Category = () => {
               navigate(`/products/${category.path.toLowerCase()}`);
               scrollTo(0, 0);
             }}
-          >
+        >
             <img
               src={category.image}
               alt=""
@@ -29,4 +29,5 @@ const Category = () => {
     </div>
   );
 };
+
 export default Category;

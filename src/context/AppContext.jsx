@@ -13,10 +13,26 @@ export const AppContextProvider = ({ children }) => {
   const [isSeller, setIsSeller] = useState(false);
   const [showUserLogin, setShowUserLogin] = useState(false);
   const [products, setProducts] = useState([]);
-  const [cartItems, setCartItems] = useState({});
+  const [cartItems, setCartItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
   // check seller status
+
+  const addItemToCart =  (item)=>{
+    const newItems = [...cartItems, item];
+    setCartItems(newItems);
+
+  }
+
+  const countCartItems =  ()=>{
+    return cartItems.length;
+  
+  }
+
+  const getCartItems =()=>{
+    return cartItems;
+  }
+
   const fetchSeller = async () => {
     try {
       const { data } = await axios.get("/api/seller/is-auth");
@@ -155,6 +171,10 @@ export const AppContextProvider = ({ children }) => {
     axios,
     fetchProducts,
     setCartItems,
+    addItemToCart,
+    countCartItems,
+    getCartItems
+
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
